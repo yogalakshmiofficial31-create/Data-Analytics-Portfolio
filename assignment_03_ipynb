@@ -1,0 +1,172 @@
+# Customer information management system
+#Customer Name Processing(string)
+
+Name = input('Enter a Name:')
+print(Name.upper()) #uppercase()
+
+Name = input('Enter a Name:')
+print(Name.lower()) #lowercase()
+
+Name = "  Yogalakshmi "
+print(Name.strip()) #strip removing leading and trailing space
+
+Name = 'yogalakshmi'
+print('Name_length',len(Name))  #using length function length of the name
+
+Name = 'yoga lakshmi'
+print("yoga" in Name) 
+
+#Customer List Management(Lists)
+Customer_Name = ['Muthu','Yoga','Jaswanth','Nila']
+Customer_Name.append('Indhu')
+print(Customer_Name)  #Using append to add last
+
+Customer_Name = ['Muthu','Yoga','Jaswanth','Nila','Indhu']
+Customer_Name.remove('Indhu')
+print(Customer_Name)  #Using remove to remove the list
+
+Customer_Name = ['Muthu','Yoga','Jaswanth','Nila','Indhu']
+Customer_Name.sort()
+print(Customer_Name)  #Using sort to arrange alphabetically
+
+Customer_Name = ['Muthu','Yoga','Jaswanth','Nila','Indhu']
+print(len(Customer_Name))  #Count total number of customers
+
+Customer_Name = ['Muthu','Yoga','Jaswanth','Nila','Indhu']
+print(Customer_Name[0])  # it will display first customer_name
+
+Customer_Name = ['Muthu','Yoga','Jaswanth','Nila','Indhu']
+print(Customer_Name[-1])  # it will display last customer_name
+
+#Company Information(Tuples)
+company = ('ABC Supportive service','Coimbatore',2015)
+print(company)    #Display all 
+
+company = ('ABC Supportive service','Coimbatore',2015)
+print('Company Name:',company[0]) #Display first value
+
+company = ('ABC Supportive service','Coimbatore',2015)
+print('Location:',company[1]) #Display middle value
+
+company = ('ABC Supportive service','Coimbatore',2015)
+print('Establishment_year:',company[2]) #Display last value
+
+#Unique Customer Cities(Sets)
+cities = {"Chennai", "Coimbatore", "Madurai", "Chennai"}
+print(cities)  # display cities
+
+cities = {"Chennai", "Coimbatore", "Madurai", "Chennai"}
+print(len(cities))    #Count total number of cities
+
+cities = {"Chennai", "Coimbatore", "Madurai", "Chennai"}
+cities.add('Salem')
+print(cities)    #add particular city
+
+cities = {"Chennai", "Coimbatore", "Madurai", "Chennai"}
+cities.remove('Chennai')
+print(cities)        #Remove particular city
+
+cities = {"Chennai", "Coimbatore", "Madurai"}
+if "Coimbatore" in cities:
+    print("City exists")
+else:
+    print("City not found")  # check whether city exists
+
+#Customer Details (Dictionaries)
+Customer = {
+    "Customer_ID":"C101",
+    "Name":"Yoga",
+    "City":"Coimbatore",
+    "Satisfication_Rating":4.5
+}
+print(Customer)   #display all customer values
+
+Customer = {
+    "Customer_ID":"C101",
+    "Name":"Yoga",
+    "City":"Coimbatore",
+    "Satisfication_Rating":4.5
+}
+Customer["Satisfication_Rating"] = 4.8
+print(Customer)    #Update satisfication Rating
+
+Customer = {
+    "Customer_ID":"C101",
+    "Name":"Yoga",
+    "City":"Coimbatore",
+    "Satisfication_Rating":4.5
+}
+Customer["Membership_Type"] = "Gold"
+print(Customer)  #Add membership type
+
+Customer = {
+    "Customer_ID":"C101",
+    "Name":"Yoga",
+    "City":"Coimbatore",
+    "Satisfication_Rating":4.5
+}
+Customer.pop("City")
+print(Customer)  #Remove city
+
+print(Customer.keys()) #Display all keys
+
+#Business Analysis Tasks
+customer_data = [
+    {"Customer_ID": "C101", "Name": "John", "City": "Chennai", "Satisfaction_Rating": 4.5},
+    {"Customer_ID": "C102", "Name": "Mary", "City": "Coimbatore", "Satisfaction_Rating": 4.8},
+    {"Customer_ID": "C103", "Name": "David", "City": "Madurai", "Satisfaction_Rating": 4.2},
+    {"Customer_ID": "C104", "Name": "Priya", "City": "Chennai", "Satisfaction_Rating": 4.6},
+    {"Customer_ID": "C105", "Name": "Arun", "City": "Madurai", "Satisfaction_Rating": 4.1}
+]
+
+#1.How many customers are stored in the system?
+print("Total Customers :", len(customer_data))
+#2.How many unique cities are represented?
+cities = set()
+
+for customer in customer_data:
+    cities.add(customer["City"])
+
+print("Unique Cities :", len(cities))
+#3.Which customer has the highest satisfaction rating?
+highest = customer_data[0]
+
+for customer in customer_data:
+    if customer["Satisfaction_Rating"] > highest["Satisfaction_Rating"]:
+        highest = customer
+
+print("Highest Satisfaction Rating :")
+print(highest["Name"], "-", highest["Satisfaction_Rating"])
+#4.Generate a simple customer summary report.
+print("Total Customers :", len(customer_data))
+print("Unique Cities :", len(cities))
+
+print("\nCities:")
+for city in cities:
+    print(city)
+
+print("\nHighest Satisfaction Rating:")
+print(highest["Name"], "-", highest["Satisfaction_Rating"])
+
+print("\nCompany:")
+print("ABC Support Services")
+print("Coimbatore")
+print("Established: 2015")
+#5.Identify duplicate customer cities and store only unique cities.
+city_list = []
+
+for customer in customer_data:
+    city_list.append(customer["City"])
+
+print("\nCities with Duplicates:")
+print(city_list)
+
+unique_cities = set(city_list)
+
+print("\nUnique Cities:")
+for city in unique_cities:
+    print(city)
+
+
+
+

@@ -1,0 +1,6 @@
+Customer Feedback Summary
+
+Total Customers : 5
+Valid Ratings : 3
+Invalid Ratings : 2
+Average Rating : 4.0

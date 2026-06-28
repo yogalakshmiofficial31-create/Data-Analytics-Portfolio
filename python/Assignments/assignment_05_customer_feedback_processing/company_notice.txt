@@ -1,0 +1,4 @@
+Every day, customer feedback is received and stored in files. 
+The management team wants an automated system that can read customer feedback data, 
+handle invalid records, generate summary reports, 
+and save the results for future analysis.

@@ -1,6 +1,3 @@
-# Customer information management system
-#Customer Name Processing(string)
-
 Name = input('Enter a Name:')
 print(Name.upper()) #uppercase()
 
